@@ -541,6 +541,8 @@ else
   echo "gitbook-cli 2.3.2"
 fi
 
+npm install mathjax@2.7.6
+
 
 ######################## clone source ###################################3
 
