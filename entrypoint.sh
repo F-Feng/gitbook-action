@@ -541,9 +541,6 @@ else
   echo "gitbook-cli 2.3.2"
 fi
 
-npm install mathjax@2.7.6
-
-
 ######################## clone source ###################################3
 
 # git clone source from repo/branch
@@ -731,6 +728,8 @@ fi
 # disable livereload.js
 sed "s/\"livereload\"/\"-livereload\"/" <book.json >tmp && mv -f tmp book.json && cat book.json
 print_info "Disable livereload.js online!"
+
+npm install mathjax@2.7.6
 
 gitbook build --gitbook=${GITBOOK_BUILD_VERSION}
 if [ $? -eq 0 ]; then
